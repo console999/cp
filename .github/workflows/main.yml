@@ -34,10 +34,15 @@ jobs:
       actions: ${{ github.event.inputs.actions || 'deploy'}}
       test111: ${{ github.event.inputs.env }} # todo
     steps:
+      - name: Extract version from package.json
+        uses: sergeysova/jq-action@v2
+        id: version
+        with:
+          cmd: 'jq . config.json.tp -r'
       - id: isDeployHeroku # TODO check atcion doc for usage
         # if: ${{ github.event.inputs.actions  == 'start'}}
         run: echo "test output"
-
+          
   output-jobenv:
     runs-on: ubuntu-latest
     needs: jobenv
