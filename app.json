@@ -1,12 +1,12 @@
 {
-    "name": "V2Ray",
-    "description": "Deploy V2ray on Heroku.",
+    "name": "cp",
+    "description": "Deploy cp.",
     "keywords": [
-        "V2Ray"
+        "cp"
     ],
     "env": {
         "UUID": {
-            "description": "V2Ray UUID",
+            "description": "cp UUID",
             "value": "ce7ea10b-5b27-49ab-a93d-6b184df9cce9"
         },
         "TUNNEL_TOKEN": {
@@ -14,7 +14,7 @@
             "required": false
         },
         "PROTOCOL": {
-            "description": "V2Ray PROTOCOL",
+            "description": "cp PROTOCOL",
             "value": "vless"
         }
     },
